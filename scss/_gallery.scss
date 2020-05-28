@@ -1,0 +1,120 @@
+.menu-nav{
+  &__item{
+    list-style: none;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+.projects {
+  padding-bottom: 2rem;
+
+  &__bio-image {
+    height: 50vh;
+    width: 100%;
+    background: 
+      linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url('../img/model-1.jpg') center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    p{
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  &__itemst {
+    width: 80vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  &__itemt {
+    position: relative;
+    border-bottom: 2px solid $secondary-color;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    transform:
+      rotate(90deg)
+      translate(-3rem, -5rem);
+  }
+  
+}
+
+.store-img {
+  transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img {
+  transform: scale(1.2);
+}
+
+.lightbox-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6) !important;
+  display: none;
+}
+.show {
+  display: block;
+}
+.lightbox-item {
+  min-height: 80vh;
+  background: url('../img/37.jpg') center/cover fixed no-repeat;
+  border-radius: 0.3rem;
+  background-size: cover;
+}
+.lightbox-close {
+  color: #fff;
+  font-size: 3rem;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.lightbox-close:hover {
+  color: $secondary-color;
+}
+.lightbox-control {
+  position: absolute;
+  font-size: 4rem;
+  color: #fff;
+  transition: all 1s linear;
+  cursor: pointer;
+}
+.lightbox-control:hover {
+  color: $secondary-color;
+}
+.btnLeft {
+  top: 50%;
+  left: 0;
+  transform: translateX(-60%);
+}
+.btnRight {
+  top: 50%;
+  right: 0;
+  transform: translateX(60%);
+}
